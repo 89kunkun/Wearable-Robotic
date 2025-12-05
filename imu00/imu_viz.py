@@ -1,6 +1,6 @@
 from typing import Callable, Tuple
 import numpy as np
-from vedo import Plotter, Line, Text2D, 
+from vedo import Plotter, Line, Text2D, settings
 
 
 def quat_to_rotmat(w: float, x: float, y: float, z: float) -> np.ndarray:
@@ -68,3 +68,4 @@ class IMUVisualizer:
         self.plotter.timer_callback("start", dt=self.dt_ms)
 
         self.plotter.show(interactive=True)
+
